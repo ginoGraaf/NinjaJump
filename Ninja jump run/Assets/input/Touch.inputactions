@@ -1,0 +1,52 @@
+{
+    "name": "Touch",
+    "maps": [
+        {
+            "name": "TouchAction",
+            "id": "2f244747-9fff-4102-a817-db2cf88804e4",
+            "actions": [
+                {
+                    "name": "TouchInput",
+                    "type": "PassThrough",
+                    "id": "4e53ed23-c8f5-4a62-9ad1-a8b0c84405a5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TouchPress",
+                    "type": "Button",
+                    "id": "4aa6473b-b775-48d8-acde-1af8d6690637",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap(duration=0.3)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e3c6c138-1246-4efa-ba66-288b012f18c6",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f8e5be45-921f-4a4f-9ab3-cde7004dad31",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
