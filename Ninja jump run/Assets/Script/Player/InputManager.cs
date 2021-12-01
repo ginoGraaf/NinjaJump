@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 [DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
@@ -20,16 +21,24 @@ public class InputManager : MonoBehaviour
     private void OnEnable()
     {
         touch.Enable();
+        TouchSimulation.Enable();
+        EnhancedTouchSupport.Enable();
+        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown += FingerDown;
     }
     private void OnDisable()
     {
         touch.Disable();
+        TouchSimulation.Disable();
+        EnhancedTouchSupport.Disable();
+        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= FingerDown;
     }
 
     private void Start()
     {
-        touch.TouchAction.TouchPress.started += ctx => StartTouch(ctx);
-        touch.TouchAction.TouchPress.canceled += ctx => EndTouch(ctx);
+        //touch.TouchAction.TouchPress.started += ctx => StartTouch(ctx);
+        //touch.TouchAction.TouchPress.canceled += ctx => EndTouch(ctx);
+        //touch.TouchAction.TouchPress.performed += ctx => StartTouch(ctx);
+    
     }
 
     private void StartTouch(InputAction.CallbackContext contex)
@@ -49,5 +58,18 @@ public class InputManager : MonoBehaviour
         {
             OnEndTouch();
         }
+    }
+
+    private void FingerDown(Finger finger)
+    {
+        if(OnStartTouch!=null)
+        {
+            OnStartTouch();
+        }
+    }
+
+    private void Update()
+    {
+
     }
 }

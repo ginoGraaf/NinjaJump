@@ -32,7 +32,7 @@ public class @Touch : IInputActionCollection, IDisposable
                     ""id"": ""4aa6473b-b775-48d8-acde-1af8d6690637"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap(duration=0.3)""
+                    ""interactions"": ""SlowTap(duration=0.0001,pressPoint=0.0001)""
                 }
             ],
             ""bindings"": [

@@ -31,6 +31,10 @@ public class DeadZoneMove : MonoBehaviour
     {
         if (!playerControl.IsDead && playerControl.FirstJump)
         {
+            speed = 1 + (playerControl.transform.position.y / 100);
+            if(speed>4){
+                speed = 10;
+            }
             Rise();
             ResetDeadZone();
         }
