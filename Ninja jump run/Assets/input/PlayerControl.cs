@@ -8,11 +8,15 @@ public class PlayerControl : MonoBehaviour
     [Header("Aim")]
     [SerializeField] private float maxUpAim;
     [SerializeField] private AimView aimView;
+
+    
     [Header("mask")]
     [SerializeField] private LayerMask mask;
     [Header("Character related")]
     [SerializeField] private float speed = 6;
-    [SerializeField] private GameObject arms;
+    [SerializeField] private Animator leftHand;
+    [SerializeField] private Animator righttHand;
+    [SerializeField] private Transform NinjaFace;
     [Header("Etc")]
     [SerializeField] private GameOverView gameoverView;
     [SerializeField] private GameObject startScreen;
@@ -51,6 +55,8 @@ public class PlayerControl : MonoBehaviour
 
         if (!onTheMove)
         {
+            leftHand.SetBool("OnMove", true);
+            righttHand.SetBool("OnMove", true);
             AudioManager.Instance.Playjump();
             onTheMove = true;
         }
@@ -76,6 +82,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (!onTheMove && !IsDead)
         {
+            leftHand.SetBool("OnMove", false);
+            righttHand.SetBool("OnMove", false);
             MovingIndicator();
         }
     }
@@ -137,7 +145,9 @@ public class PlayerControl : MonoBehaviour
                 AudioManager.Instance.PlayHit();
             }
             //Debug.Log("Dead");
-            arms.SetActive(true);
+            leftHand.SetBool("Dead", true);
+            righttHand.SetBool("Dead", true);
+            NinjaFace.rotation = new Quaternion(0, -180, 0, 1);
             IsDead = true;
             gameoverView.GameOver(this);
           
