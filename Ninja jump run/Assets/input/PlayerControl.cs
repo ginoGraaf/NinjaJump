@@ -53,7 +53,7 @@ public class PlayerControl : MonoBehaviour
     private void SetMoveAction()
     {
 
-        if (!onTheMove)
+        if (!onTheMove && startScreen.activeInHierarchy==false)
         {
             leftHand.SetBool("OnMove", true);
             righttHand.SetBool("OnMove", true);
@@ -69,13 +69,12 @@ public class PlayerControl : MonoBehaviour
         
         if(onTheMove && !IsDead)
         {
-            if(startScreen.activeInHierarchy!=false)
+            if (startScreen.activeInHierarchy == false)
             {
-                startScreen.SetActive(false);
+                FirstJump = true;
+                MoveCharacter();
+                //the move
             }
-            FirstJump = true;
-            MoveCharacter();
-            //the move
         }
     }
     private void FixedUpdate()
