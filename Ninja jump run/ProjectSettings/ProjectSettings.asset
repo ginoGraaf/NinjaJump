@@ -672,7 +672,18 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    4: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    7: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    13: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    14: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    19: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    21: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    25: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    27: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    28: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    29: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
