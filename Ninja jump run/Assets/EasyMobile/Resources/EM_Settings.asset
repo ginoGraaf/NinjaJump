@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EM_Settings
   m_EditorClassIdentifier: 
   mAdvertisingSettings:
-    mAutoLoadAdsMode: 2
+    mAutoLoadAdsMode: 1
     mAdCheckingInterval: 10
     mAdLoadingInterval: 20
     mIosDefaultAdNetworks:
@@ -21,9 +21,9 @@ MonoBehaviour:
       interstitialAdNetwork: 0
       rewardedAdNetwork: 0
     mAndroidDefaultAdNetworks:
-      bannerAdNetwork: 0
-      interstitialAdNetwork: 0
-      rewardedAdNetwork: 0
+      bannerAdNetwork: 10
+      interstitialAdNetwork: 10
+      rewardedAdNetwork: 10
     mAdColony:
       mEnable: 0
       mAppId:
@@ -201,13 +201,13 @@ MonoBehaviour:
         keys: []
         values: []
     mUnityAds:
-      mEnable: 0
+      mEnable: 1
       mAppId:
         mIosId: 
-        mAndroidId: 
+        mAndroidId: 4543217
       mDefaultBannerAdId:
         mIosId: 
-        mAndroidId: 
+        mAndroidId: Banner_Android
       mDefaultInterstitialAdId:
         mIosId: video
         mAndroidId: video
@@ -223,7 +223,7 @@ MonoBehaviour:
       mCustomRewardedAdIds:
         keys: []
         values: []
-      mEnableTestMode: 0
+      mEnableTestMode: 1
     mVungleAds:
       mEnable: 0
       mAppId:

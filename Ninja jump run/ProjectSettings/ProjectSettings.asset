@@ -673,17 +673,17 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    4: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    7: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    13: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    14: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    19: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    21: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    25: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    27: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    28: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
-    29: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP
+    1: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    4: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    7: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    13: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    14: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    19: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    21: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    25: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    27: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    28: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
+    29: EASY_MOBILE;EASY_MOBILE_PRO;EM_URP;UNITY_MONETIZATION;EM_UNITY_ADS
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
@@ -755,7 +755,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Analytics: 1
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
     UNet: 1
+    Unity Ads: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -768,10 +774,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 36236a5d-9623-4c27-bd05-84de16895159
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Ninja jump run
+  organizationId: gino-1830821
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 1
   disableOldInputManagerSupport: 0
