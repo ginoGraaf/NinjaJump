@@ -55,7 +55,7 @@ namespace EasyMobile.Internal.NativeAPIs.Media
             // Create a delegate for the TBM VC.
             picker.Delegate = new InternalUIImagePickerControllerDelegate(InternalUIImagePickerControllerDelegate.PickerOperation.RecordVideo)
             {
-                CloseAndResetMatchmakerVC = () =>
+                CloseAndResetVC = () =>
                 {
                     if (mPickerController != null)
                     {
@@ -114,7 +114,7 @@ namespace EasyMobile.Internal.NativeAPIs.Media
             // Create a delegate for the TBM VC.
             picker.Delegate = new InternalUIImagePickerControllerDelegate(InternalUIImagePickerControllerDelegate.PickerOperation.TakePicture)
             {
-                CloseAndResetMatchmakerVC = () =>
+                CloseAndResetVC = () =>
                 {
                     if (mPickerController != null)
                     {

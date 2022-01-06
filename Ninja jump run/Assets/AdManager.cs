@@ -53,6 +53,7 @@ public class AdManager : MonoBehaviour
         if(Advertising.IsInterstitialAdReady())
         {
             Advertising.ShowInterstitialAd();
+
         }
     }
     public void ShowRewardAD()

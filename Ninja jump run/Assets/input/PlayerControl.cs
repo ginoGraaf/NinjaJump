@@ -20,6 +20,7 @@ public class PlayerControl : MonoBehaviour
     [Header("Etc")]
     [SerializeField] private GameOverView gameoverView;
     [SerializeField] private GameObject startScreen;
+    [SerializeField] private AdManager adManager;
     #endregion
 
     #region Fields
@@ -149,7 +150,9 @@ public class PlayerControl : MonoBehaviour
             NinjaFace.rotation = new Quaternion(0, -180, 0, 1);
             IsDead = true;
             gameoverView.GameOver(this);
-          
+            adManager.ShowInterstitialAD();
+
+
         }
         if(other.gameObject.tag=="Coin")
         {

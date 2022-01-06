@@ -8,7 +8,6 @@ using UIImagePickerControllerDelegate = EasyMobile.iOS.UIKit.UIImagePickerContro
 
 namespace EasyMobile.Internal.NativeAPIs.Media
 {
-    // Matchmaker VC delegate.
     internal class InternalUIImagePickerControllerDelegate : UIImagePickerControllerDelegate
     {
         public enum PickerOperation
@@ -20,7 +19,8 @@ namespace EasyMobile.Internal.NativeAPIs.Media
 
         public PickerOperation Operation { get; private set; }
 
-        public Action CloseAndResetMatchmakerVC { get; set; }
+        // Using Action & Func properties so we can have return type.
+        public Action CloseAndResetVC { get; set; }
 
         public Action<string, MediaResult> CompleteCallback { get; set; }
 
@@ -33,8 +33,8 @@ namespace EasyMobile.Internal.NativeAPIs.Media
 
         public void ImagePickerControllerDidFinishPickingMediaWithInfo(UIImagePickerController picker, NSDictionary<NSString, iOSObjectProxy> info)
         {
-            if (CloseAndResetMatchmakerVC != null)
-                CloseAndResetMatchmakerVC();
+            if (CloseAndResetVC != null)
+                CloseAndResetVC();
 
             MediaResult result = CreateResult(Operation, info);
             string error = result == null ? "Couldn't get url of the selected item." : null;
@@ -45,8 +45,8 @@ namespace EasyMobile.Internal.NativeAPIs.Media
 
         public void ImagePickerControllerDidCancel(UIImagePickerController picker)
         {
-            if (CloseAndResetMatchmakerVC != null)
-                CloseAndResetMatchmakerVC();
+            if (CloseAndResetVC != null)
+                CloseAndResetVC();
         }
 
         private MediaResult CreateResult(PickerOperation operation, NSDictionary<NSString, iOSObjectProxy> info)

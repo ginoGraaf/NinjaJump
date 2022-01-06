@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EM_Settings
   m_EditorClassIdentifier: 
   mAdvertisingSettings:
+    mAutoInit: 1
     mAutoLoadAdsMode: 1
     mAdCheckingInterval: 10
     mAdLoadingInterval: 20
@@ -20,10 +21,12 @@ MonoBehaviour:
       bannerAdNetwork: 0
       interstitialAdNetwork: 0
       rewardedAdNetwork: 0
+      rewardedInterstitialNetwork: 0
     mAndroidDefaultAdNetworks:
-      bannerAdNetwork: 10
-      interstitialAdNetwork: 10
-      rewardedAdNetwork: 10
+      bannerAdNetwork: 2
+      interstitialAdNetwork: 2
+      rewardedAdNetwork: 0
+      rewardedInterstitialNetwork: 0
     mAdColony:
       mEnable: 0
       mAppId:
@@ -51,23 +54,27 @@ MonoBehaviour:
         keys: []
         values: []
     mAdMob:
-      mEnable: 0
+      mEnable: 1
       mTargetingSettings:
-        mTagForChildDirectedTreatment: 0
+        mTagForChildDirectedTreatment: 2
         mExtraOptions:
           keys: []
           values: []
       mEnableTestMode: 0
+      mUseAdaptiveBanner: 0
       mAppId:
         mIosId: 
         mAndroidId: 
       mDefaultBannerAdId:
         mIosId: 
-        mAndroidId: 
+        mAndroidId: ca-app-pub-2387510483826461/4732401635
       mDefaultInterstitialAdId:
         mIosId: 
-        mAndroidId: 
+        mAndroidId: ca-app-pub-2387510483826461/5223356225
       mDefaultRewardedAdId:
+        mIosId: 
+        mAndroidId: 
+      mDefaultRewardedInterstitialAdId:
         mIosId: 
         mAndroidId: 
       mCustomBannerAdIds:
@@ -77,6 +84,9 @@ MonoBehaviour:
         keys: []
         values: []
       mCustomRewardedAdIds:
+        keys: []
+        values: []
+      mCustomRewardedInterstitialAdIds:
         keys: []
         values: []
     mAppLovin:
@@ -201,7 +211,7 @@ MonoBehaviour:
         keys: []
         values: []
     mUnityAds:
-      mEnable: 1
+      mEnable: 0
       mAppId:
         mIosId: 
         mAndroidId: 4543217
@@ -223,7 +233,7 @@ MonoBehaviour:
       mCustomRewardedAdIds:
         keys: []
         values: []
-      mEnableTestMode: 1
+      mEnableTestMode: 0
     mVungleAds:
       mEnable: 0
       mAppId:
@@ -323,6 +333,11 @@ MonoBehaviour:
       mToggleSelectedIndex: 0
       mButtonSelectedIndex: 0
       mEnableCopyPasteMode: 0
+    mIsAppTrackingEnabled: 0
+    mAppTrackingSettings:
+      mIOSInfoPlistKeys:
+      - mKey: NSUserTrackingUsageDescription
+        mValue: '[Your usage description]'
   mRatingRequestSettings:
     mDefaultRatingDialogContent:
       mTitle: Rate $PRODUCT_NAME

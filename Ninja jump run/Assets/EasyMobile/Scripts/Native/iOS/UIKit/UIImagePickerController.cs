@@ -11,8 +11,6 @@ namespace EasyMobile.iOS.UIKit
 {
     internal class UIImagePickerController : UIViewController
     {
-        private const string FrameworkName = "UIKit";
-
         /// <summary>
         /// The source to use when picking an image or when determining available media types.
         /// </summary>

@@ -126,7 +126,9 @@ namespace EasyMobile.Editor
                     EM_ScriptingSymbols.IronSource,
                     EM_ScriptingSymbols.MoPub,
                     EM_ScriptingSymbols.TapJoy,
-                    EM_ScriptingSymbols.UnityMonetization
+                    EM_ScriptingSymbols.UnityMonetization,
+                    EM_ScriptingSymbols.UnityAds,
+                    EM_ScriptingSymbols.Vungle
                 });
         }
 

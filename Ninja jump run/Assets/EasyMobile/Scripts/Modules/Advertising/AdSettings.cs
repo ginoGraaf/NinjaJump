@@ -10,6 +10,16 @@ namespace EasyMobile
     public class AdSettings
     {
         /// <summary>
+        /// Gets or sets module auto init
+        /// </summary>
+        public bool AutoInit
+        {
+            get { return mAutoInit; }
+            set { mAutoInit = value; }
+        }
+        
+        
+        /// <summary>
         /// Gets or sets auto ad loading mode.
         /// </summary>
         public AutoAdLoadingMode AutoAdLoadingMode
@@ -153,14 +163,19 @@ namespace EasyMobile
             public BannerAdNetwork bannerAdNetwork;
             public InterstitialAdNetwork interstitialAdNetwork;
             public RewardedAdNetwork rewardedAdNetwork;
+            public RewardedInterstitialAdNetwork rewardedInterstitialNetwork;
 
-            public DefaultAdNetworks(BannerAdNetwork banner, InterstitialAdNetwork interstitial, RewardedAdNetwork rewarded)
+            public DefaultAdNetworks(BannerAdNetwork banner, InterstitialAdNetwork interstitial, RewardedAdNetwork rewarded, RewardedInterstitialAdNetwork rewardedInterstitial)
             {
                 bannerAdNetwork = banner;
                 interstitialAdNetwork = interstitial;
                 rewardedAdNetwork = rewarded;
+                rewardedInterstitialNetwork = rewardedInterstitial;
             }
         }
+
+        [SerializeField] 
+        private bool mAutoInit = true;
 
         // Automatic ad-loading config.
         [SerializeField]
@@ -174,9 +189,9 @@ namespace EasyMobile
 
         // Default ad networks.
         [SerializeField]
-        private DefaultAdNetworks mIosDefaultAdNetworks = new DefaultAdNetworks(BannerAdNetwork.None, InterstitialAdNetwork.None, RewardedAdNetwork.None);
+        private DefaultAdNetworks mIosDefaultAdNetworks = new DefaultAdNetworks(BannerAdNetwork.None, InterstitialAdNetwork.None, RewardedAdNetwork.None, RewardedInterstitialAdNetwork.None);
         [SerializeField]
-        private DefaultAdNetworks mAndroidDefaultAdNetworks = new DefaultAdNetworks(BannerAdNetwork.None, InterstitialAdNetwork.None, RewardedAdNetwork.None);
+        private DefaultAdNetworks mAndroidDefaultAdNetworks = new DefaultAdNetworks(BannerAdNetwork.None, InterstitialAdNetwork.None, RewardedAdNetwork.None, RewardedInterstitialAdNetwork.None);
 
         // Network settings.
         [SerializeField]

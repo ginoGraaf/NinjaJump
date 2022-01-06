@@ -9,9 +9,26 @@ namespace EasyMobile.iOS.UIKit
 {
     internal class UIViewController : iOSObjectProxy
     {
+        protected const string FrameworkName = "UIKit";
+
         internal UIViewController(IntPtr selfPointer)
             : base(selfPointer)
         {
+        }
+
+        /// <summary>
+        /// The presentation controller that’s managing the current view controller.
+        /// </summary>
+        public UIPresentationController PresentationController
+        {
+            get
+            {
+                var pointer = C.UIViewController_presentationController(SelfPtr());
+                var controller = InteropObjectFactory<UIPresentationController>.FromPointer(pointer, ptr => new UIPresentationController(ptr));
+                CoreFoundation.CFFunctions.CFRelease(pointer);  // release pointer returned by the native method
+                return controller;
+            }
+            
         }
 
         /// <summary>
@@ -107,6 +124,10 @@ namespace EasyMobile.iOS.UIKit
                                               bool animated,
                                               DismissViewControllerCallback callback, 
                                               IntPtr secondaryCallback);
+
+            [DllImport("__Internal")]
+            internal static extern /* UIPresentationController */ IntPtr UIViewController_presentationController(
+                /* InteropUIViewController */ HandleRef selfPtr);
         }
 
         #endregion
