@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &63068015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,7 +1675,7 @@ MonoBehaviour:
   NinjaFace: {fileID: 695699410}
   gameoverView: {fileID: 1136699960}
   startScreen: {fileID: 98481288}
-  adManager: {fileID: 0}
+  adManager: {fileID: 582978220}
 --- !u!54 &528632309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4284,7 +4284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1654139938
 RectTransform:
   m_ObjectHideFlags: 0

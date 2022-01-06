@@ -60,7 +60,7 @@ MonoBehaviour:
         mExtraOptions:
           keys: []
           values: []
-      mEnableTestMode: 0
+      mEnableTestMode: 1
       mUseAdaptiveBanner: 0
       mAppId:
         mIosId: 
